@@ -141,9 +141,24 @@ Fav.addEventListener('click', () => {
 
 
 
-// Contact form
+// Contact form functionality
 
-const ContactForm = (e) =>{
-    
+let inputArray = [];
 
-}
+    const addToInputArray = (element) => {
+        const value = element.value;
+        const name = element.name;
+        const inputValue = { name: name, value: value };
+        
+        const index = inputArray.findIndex(item => item.name === name);
+        if (index === -1) {
+            inputArray.push(inputValue);
+        } else {
+            inputArray[index] = inputValue;
+        }
+        console.log(inputArray);
+    }
+
+  const Submit = (e) =>{
+    e.preventDefault();
+  }
