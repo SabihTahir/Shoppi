@@ -159,6 +159,6 @@ let inputArray = [];
         console.log(inputArray);
     }
 
-  const Submit = (e) =>{
-    e.preventDefault();
+    const Submit = (event) => {
+      event.preventDefault();
   }
